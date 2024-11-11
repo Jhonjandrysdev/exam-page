@@ -22,19 +22,6 @@ for(let i = 0; i < numeroPaginas; i++){
 	});
 }
 
-// ? ----- ----- Hover ----- -----
-peliculas.forEach((pelicula) => {
-	pelicula.addEventListener('mouseenter', (e) => {
-		const elemento = e.currentTarget;
-		setTimeout(() => {
-			peliculas.forEach(pelicula => pelicula.classList.remove('hover'));
-			elemento.classList.add('hover');
-		}, 300);
-	});
-});
-
-
-
 // <--------- VALIDACION FORMULARIO ---------------->
 
 const form = document.getElementById('myForm');
@@ -68,5 +55,5 @@ form.addEventListener('submit', (event) => {
     console.log('Nombre:', name);
     console.log('Correo:', email);
     alert("Bienvenido " + email)
-    form.submit(); // Enviar el formulario (solo después de validación exitosa)
+    form.submit(); 
   });
