@@ -38,6 +38,9 @@ header .logotipo {
 	text-align: center;
 	
 }
+.boton svg {
+	padding-right: 15px;
+}
 
 header nav .separadores a {
 	color: #AAA;
@@ -422,6 +425,10 @@ button {
 	header nav a:hover
 {
 	color: #E50914;
+}
+
+.contenedor .boton{
+	margin-bottom: 10px;
 }
 
 	.pelicula-principal {
