@@ -1,0 +1,523 @@
+:root {
+	--rojo: #E50914;
+	--fondo: #141414;
+}
+
+/*EVIITA MARGIN Y PADDING POR DEFECT*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--fondo);
+	font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor {
+	width: 90%;
+	margin: auto;
+}
+
+header {
+	padding: 30px 0;
+}
+
+header .contenedor {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logotipo {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--rojo);
+	font-size: 40px;
+	text-align: center;
+	
+}
+
+header nav .separadores a {
+	color: #AAA;
+	text-decoration: none;
+}
+
+header nav .separadores{
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	gap: 50px;
+}
+
+header nav a:hover
+{
+	color: #E50914;
+}
+/* ---- ----- ----- Pelicula Principal ----- ----- ----- */
+.pelicula-principal {
+	font-size: 16px;
+	min-height: 40.62em;
+	color: #fff;
+	background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/wUTRolYXVyQCA1yoplYm9dVxVmI.jpg);
+	background-position: center center;
+	background-size: cover;
+	margin-bottom: 3.12em;
+	display: flex;
+	align-items: end;
+}
+
+.pelicula-principal .contenedor {
+	margin: 0 auto;
+	margin-bottom: 6.25em;
+}
+
+.pelicula-principal .titulo {
+	font-weight: 600;
+	font-size: 3.12em;
+	margin-bottom: 0.4em;
+}
+
+.pelicula-principal .descripcion {
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 1.75em;
+	max-width: 50%;
+	margin-bottom: 1.25em;
+}
+
+.pelicula-principal .boton {
+	background: rgba(0,0,0, 0.5);
+	border: none;
+	border-radius: 0.31em;
+	padding: 0.93em 1.87em;
+	color: #fff;
+	margin-right: 1.25em;
+	cursor: pointer;
+	transition: .3s ease all;
+	font-size: 1.12em;
+}
+
+.pelicula-principal .boton:hover {
+	background: #fff;
+	color: #000;
+}
+
+.pelicula-principal .contenedor .boton i {
+	margin-right: 1.25em;
+}
+
+/* ---- ----- ----- Contenedor Titulo y Controles ----- ----- ----- */
+.contenedor-titulo-controles {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+
+.contenedor-titulo-controles h3 {
+	color: #fff;
+	font-size: 30px;
+}
+
+.contenedor-titulo-controles .indicadores button {
+	background: #fff;
+	height: 3px;
+	width: 10px;
+	cursor: pointer;
+	border: none;
+	margin-right: 2px;
+}
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+	background: red;
+}
+
+
+/* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
+.peliculas-recomendadas {
+	margin-bottom: 70px;
+}
+
+.peliculas-recomendadas .contenedor-principal {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+	position: absolute;
+	border: none;
+	background: rgba(0,0,0,0.3);
+	font-size: 40px;
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha:hover {
+	background: rgba(0,0,0, .9);
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda {
+	left: 0;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+	right: 0;
+}
+
+/* ---- ----- ----- Carousel ----- ----- ----- */
+.peliculas-recomendadas .contenedor-carousel {
+	width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula {
+	min-width: 20%;
+	transition: .3s ease all;
+	box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula.hover {
+	transform: scale(1.2);
+	transform-origin: center;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
+	width: 100%;
+	vertical-align: top;
+}
+
+/* ----------------- PLANES ----------------*/
+/* ... (tu código CSS existente) */
+.contenedor-tabla{
+	margin: auto auto;
+	margin-bottom: 6.25em;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+
+	
+}
+.price{
+	text-align: center;
+	color: #E50914;
+	margin-bottom: 1.25em;
+}
+table {
+
+    width: 40%; /* Ajusta el ancho según sea necesario */
+}
+
+th, td {
+    border: 1px solid #FFF;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Estilos adicionales para personalizar la apariencia de la tabla */
+th {
+    background-color: #E50914;
+	text-align: center;
+}
+
+tr {
+    background-color: #E50914;
+	color: #fff;
+}
+
+table tbody{
+	border: 1px solid #FFF;
+}
+/*-------------- FORMULARIO ---------------*/
+label{
+	color: #E50914;
+	font-weight: 700;
+}
+.contenedor-formulario #subscriptionForm{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	margin: 0 auto;
+	width: 100%;
+	padding: 1.25em;
+	background-color: #fff;
+	position: relative;
+	
+}
+
+.contenedor-formulario {
+	width: 40em;
+	margin: 0 auto;
+	padding: 2em;
+	border-radius: 5px;
+  }
+  
+  form {
+	display: flex;
+	flex-direction: column;
+  }
+  
+  label {
+	margin-bottom: 0.5em;
+  }
+  
+  input, select {
+	margin-bottom: 1em;
+	padding: 0.5em;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+  }
+  
+
+button {
+	background-color: #E50914; /* Color de fondo inicial */
+	color: #fff;
+	padding: 10px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all 0.1s ease-in-out; /* Transición suave para los cambios */
+  }
+  
+  button:hover {
+	background-color: red; /* Color de fondo al pasar el cursor */
+	color: black; 
+	font-size: 15px; 
+  }
+
+  .contenedor-principal {
+	text-align: center; 
+  }
+  
+  .tabla-precios,
+  .contenedor-formulario {
+	display: inline-block;
+	vertical-align: top;
+	margin: 1.25em; 
+	padding: 1.25em;
+	border-radius: 0.3125em; 
+	box-sizing: border-box;
+  }
+  
+  .tabla-precios table {
+	width: 100%;
+	border-collapse: collapse;
+  }
+  
+  .tabla-precios th, .tabla-precios td {
+	border: 1px solid #ccc;
+	padding: 10px;
+  }
+  
+  .contenedor-formulario form {
+	display: flex;
+	flex-direction: column;
+  }
+
+  .mensaje{
+	color: #E50914;
+	font-size: 10;
+	text-align: center;
+	margin-bottom: 1.45em;
+  }
+  .piePagina{
+	padding-top: 2rem;
+	padding-left: 3rem;
+	padding-right: 3rem;
+	padding-bottom: 3rem;
+  }
+  .contenedor-pie-de-pagina{
+	width: 100%;
+	display: flex;
+	padding-bottom: 1rem;
+	text-align: left;
+  }
+  .container-politicas{
+	padding-bottom: 1rem;
+	text-align: left;
+  }
+  .contenedor-pie-de-pagina a{
+	color: #fff;
+	color: #AAA;
+	text-decoration: none;
+  }
+
+  .piePagina{
+	padding-top: 3rem;
+	padding-left: 3rem;
+	padding-right: 3rem;
+	padding-bottom: 3rem;
+
+  }
+  .container-politicas{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding-bottom: 1rem;
+	text-align: left;
+  }
+  .container-politicas a{
+	text-align: left;
+	color: #fff;
+	font-size: 14px;
+  }
+
+  .contenedor-pie-de-pagina{
+	color: #fff;
+	width: 100%;
+	display: flex;
+	padding-bottom: 1rem;
+	text-align: left;
+	text-decoration: none;
+	font-size: 18px;
+	margin-bottom: 1rem;
+  }
+
+  .cont-final {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	gap: 20px;
+  }
+  .cont-final a{
+	text-align: left;
+	color: #fff;
+	font-size: 15px;
+  }
+
+
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media screen and (max-width: 800px) {
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	header .contenedor {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	header nav a:hover
+{
+	color: #E50914;
+}
+
+	.pelicula-principal {
+		font-size: 14px;
+	}
+
+	.pelicula-principal .descripcion {
+		max-width: 100%;
+	}
+
+	.peliculas-recomendadas .contenedor-carousel {
+		overflow: visible;
+	}
+
+	.peliculas-recomendadas .contenedor-carousel .carousel {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+
+	.peliculas-recomendadas .indicadores,
+	.peliculas-recomendadas .flecha-izquierda,
+	.peliculas-recomendadas .flecha-derecha {
+		display: none;
+	}
+
+	header nav .separadores a {
+		color: #AAA;
+		text-decoration: none;
+	}
+	
+	header nav .separadores{
+		display: inline-flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+		gap: 50px;
+	}
+
+	.tabla-precios,
+	.contenedor-formulario {
+	  width: 100%;
+	  margin: 10px auto; 
+	}
+	table {
+
+		width: 90%; /* Ajusta el ancho según sea necesario */
+	}
+	
+	  form {
+		flex-direction: column; /* Mantener la disposición vertical */
+	  }
+
+	  .contenedor-tabla{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.piePagina{
+		padding-top: 3rem;
+		padding-left: 3rem;
+		padding-right: 3rem;
+		padding-bottom: 3rem;
+
+	  }
+	  .container-politicas{
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		padding-bottom: 1rem;
+		text-align: left;
+	  }
+
+	  .contenedor-pie-de-pagina{
+		color: #fff;
+		width: 100%;
+		display: flex;
+		padding-bottom: 1rem;
+		text-align: left;
+		text-decoration: none;
+		font-size: 18px;
+		margin-bottom: 1rem;
+	  }
+	  .cont-final {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		gap: 20px;
+	  }
+	  .cont-final a{
+		text-align: left;
+		color: #fff;
+		font-size: 15px;
+	  }
+
+
+	
+}
